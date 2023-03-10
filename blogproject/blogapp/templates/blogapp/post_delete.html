@@ -1,0 +1,10 @@
+{% block content %}
+   <h1>Delete Post</h1>
+
+   <p>Are you sure you want to delete the post : {{ post }}?</p>
+   <a href="{{ request.META.HTTP_REFERER }}">Go Back</a>
+   <form action="" method="POST">
+      {% csrf_token %}
+      <input type="submit" value="Yes, delete."/>
+   </form>
+{% endblock content %}
